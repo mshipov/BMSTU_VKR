@@ -10,7 +10,7 @@ import numpy as np
 # import numpy as np
 
 app = Flask(__name__)
-model = models.load_model("C:/Users/Public/Documents/my_model")
+model = models.load_model("models/my_model")
 @app.route('/', methods=['get', 'post'])
 def main():
     message = ''

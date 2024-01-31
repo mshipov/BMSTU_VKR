@@ -12,7 +12,7 @@ def main():
 @app.route('/all_features/', methods=['GET', 'POST'])
 def all_features():
     message = ''
-    model = models.load_model("C:/Users/Public/Documents/my_model/all")
+    model = models.load_model("../models/all")
 
     if request.method == 'POST':
         param = []
@@ -36,7 +36,7 @@ def all_features():
 @app.route('/key_features/', methods=['GET', 'POST'])
 def key_features():
     message = ''
-    model = models.load_model("C:/Users/Public/Documents/my_model/key")
+    model = models.load_model("../models/key")
 
     if request.method == 'POST':
         param = []

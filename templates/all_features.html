@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    form {
+    margin: auto;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Все признаки</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <h1>Прогнозирование соотношения матрица-наполнитель</h1>
+
+    <form action="" method="POST" >
+    <fieldset>
+        <legend align="left"> Введите значения </legend>
+        <div class="bblock">
+
+            <p><b>Плотность</b>, кг/м<sup><small>3</small></sup>,
+                <small>(1731..2207)</small>
+                <input name="1" type="number" required>
+                </p>
+
+                <p>
+                <b>Модуль упругости</b>, ГПа,
+                <small>(2..1911)</small>
+                <input name="2" type="number" required>
+           </p>
+                <p>
+                <b>Количество отвердителя</b>, м.%,
+                <small>(18..198)</small>
+                <input name="3" type="number" required>
+            </p>
+                <p>
+                <b>Содержание эпоксидных групп</b>,%_2,
+                <small>(14..29)</small>
+                <input name="4" type="number" required>
+            </p>
+                <p>
+                <b>Температура вспышки</b>, С_2,
+                <small>(160..413)</small>
+                <input name="5" type="number" required>
+            </p>
+
+                <p>
+                <b>Поверхностная плотность</b>, г/м<sup><small>2</small></sup>,
+                <small>(1..1400)</small>
+                <input name="6" type="number" required>
+
+            </p>
+                <p>
+                <b>Модуль упругости при растяжении</b>, ГПа,
+                <small>(64..82)</small>
+                <input name="7" type="number" required>
+            </p>
+                <p>
+                <b>Прочность при растяжении</b>, МПа,
+                <small>(1036..3848)</small>
+                <input name="8" type="number" required>
+            </p>
+                <p>
+                <b>Потребление смолы</b>, г/м<sup><small>2</small></sup>,
+                <small>(34..414)</small>
+                <input name="9" type="number" required>
+            </p>
+
+                <p>
+                <b>Угол нашивки</b>,
+                <small>(0, 90)</small>
+                <input name="10" type="number" required>
+            </p>
+                <p>
+                <b>Шаг нашивки</b>,
+                <small>(0..14)</small>
+                <input name="11" type="number" required>
+            </p>
+                <p>
+                <b>Плотность нашивки</b>,
+                <small>(12..104)</small>
+                <input name="12" type="number" required>
+            </p>
+            <p>
+                <input type="submit"> </p> </div>
+
+        <div class="bblock">
+            <p><img src="../static/img/kompozit.jpg"
+                          width="400px"></p>
+
+            {% if result %}
+            <p style="font-size:35px">
+                Результат прогноза</p>
+
+            <p style="font-size:20px">{{result}}</p>
+            {% endif %}
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
